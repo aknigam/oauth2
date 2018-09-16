@@ -6,7 +6,9 @@ import org.springframework.security.oauth2.provider.ClientRegistrationException;
 import org.springframework.security.oauth2.provider.client.BaseClientDetails;
 import org.springframework.security.oauth2.provider.client.InMemoryClientDetailsService;
 
-
+/**
+ * SampleClientDetailsService
+ */
 public class SampleClientDetailsService extends InMemoryClientDetailsService {
 
     @Autowired
