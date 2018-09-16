@@ -14,6 +14,7 @@ import org.springframework.security.oauth2.config.annotation.builders.ClientDeta
 import org.springframework.security.oauth2.config.annotation.builders.InMemoryClientDetailsServiceBuilder;
 import org.springframework.security.oauth2.config.annotation.configurers.ClientDetailsServiceConfigurer;
 import org.springframework.security.oauth2.config.annotation.web.configuration.EnableAuthorizationServer;
+import org.springframework.security.oauth2.config.annotation.web.configuration.EnableResourceServer;
 import org.springframework.security.oauth2.provider.ClientDetails;
 import org.springframework.security.oauth2.provider.ClientDetailsService;
 import org.springframework.security.oauth2.provider.client.BaseClientDetails;
@@ -45,7 +46,10 @@ public class SampleAuthorisationServerConfiguration extends OAuth2AuthorizationS
     @Override
     public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
 
+        // IMPORTANT STEP to override the ClientDetailsService and BaseClientDetails
         clients.setBuilder(new SampleInMemoryClientDetailsServiceBuilder());
+
+
         ClientDetailsServiceBuilder<InMemoryClientDetailsServiceBuilder>.ClientBuilder builder = clients
                 .inMemory().withClient(this.details.getClientId());
 
