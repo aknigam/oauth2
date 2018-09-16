@@ -1,0 +1,13 @@
+security:
+  oauth2:
+    client:
+      client-id: "foo"
+      client-secret: "bar"
+      autoApprove: "true"
+    authorization:
+      checkTokenAccess: "isAuthenticated()"
+
+logging:
+  level:
+    root: INFO
+    org.springframework.web: DEBUG
