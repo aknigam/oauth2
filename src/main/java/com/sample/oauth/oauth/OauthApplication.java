@@ -6,6 +6,14 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.E
 import org.springframework.security.oauth2.config.annotation.web.configuration.EnableResourceServer;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
+
+/**
+ * Refer: https://dzone.com/articles/secure-spring-rest-with-spring-security-and-oauth2
+ *
+ * Important classes can be found in the following package
+ * package org.springframework.security.oauth2.config.annotation.web.configuration;
+ */
+
 @EnableWebMvc
 @EnableAuthorizationServer
 @EnableResourceServer
