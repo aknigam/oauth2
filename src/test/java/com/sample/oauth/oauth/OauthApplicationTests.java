@@ -25,7 +25,7 @@ public class OauthApplicationTests {
 	private String clientSecret = "bar";
 
 	private String user = "user";
-	private String securityPassword = "4629ebf5-29de-4dd5-9125-8a57bfaeafd5";
+	private String securityPassword = "af748ee4-0b68-41ac-b403-f899ce4fe2e3";
 
 	@Test
 	public void testResponseTypeTokenOauth(){
@@ -58,7 +58,7 @@ public class OauthApplicationTests {
 		requestHeaders.set(HttpHeaders.AUTHORIZATION, "bearer "+accessToken);
 		requestEntity = new HttpEntity<String>( requestHeaders);
 
-		ResponseEntity<String> response = restTemplate.exchange("http://localhost:8090/hello", HttpMethod.GET,
+		ResponseEntity<String> response = restTemplate.exchange("http://localhost:8090/hello/anand", HttpMethod.GET,
 				requestEntity, String.class);
 		String helloResponse = response.getBody();
 		System.out.println(helloResponse);
@@ -106,7 +106,7 @@ public class OauthApplicationTests {
 		requestHeaders.set(HttpHeaders.AUTHORIZATION, "bearer "+bearer);
 		requestEntity = new HttpEntity<String>( requestHeaders);
 
-		ResponseEntity<String> response = restTemplate.exchange("http://localhost:8090/hello", HttpMethod.GET,
+		ResponseEntity<String> response = restTemplate.exchange("http://localhost:8090/hello/anand", HttpMethod.GET,
 				requestEntity, String.class);
 		String helloResponse = response.getBody();
 		System.out.println(helloResponse);

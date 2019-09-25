@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 public class HelloResource {
 
 
-    @GetMapping(path = "hello")
+    @GetMapping(path = "/hello/{name}")
     public String hello(@PathVariable("name") String name, HttpServletRequest request) {
         return "hello "+ name + "!";
     }
